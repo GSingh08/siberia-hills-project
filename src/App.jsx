@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import LandingPage from './components';
 
 class App extends Component {
   constructor(props) {
