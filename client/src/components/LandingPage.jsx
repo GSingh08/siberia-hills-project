@@ -30,18 +30,45 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <div className='input-btn' ref={node => this.node = node}>
-        <h1> SIBERIA HILLS </h1>
-        <input
-          type="text"
-          name="e-mail"
-          placeholder="Sample@Website.com"
-        />
-        <button className='btn'>Submit</button>
-
-        <h3>BACK IN AUGUST</h3>
-        <h3>SIGN UP FOR FIRST UPDATES </h3>
-        <h3>LOVE YOU ALL </h3>
+      <div 
+        className='input-btn'
+        ref={node => this.node = node}
+        style={{
+          textAlign: 'center',
+          height: '400px'
+        }}
+      >
+        <img src={require('../assets/Logo.png')} />
+        <br />
+        <div>
+          <input
+            style={{
+              width: '200px',
+              height: '20px'
+            }}
+            type="text"
+            name="e-mail"
+            placeholder="Sample@Website.com"
+          />
+          <button 
+            className='btn'
+            style={{
+              height: '27px',
+              fontWeight: 'bold'
+            }}
+          >Submit</button>
+        </div>
+        <h3 style={{
+          fontFamily: 'Times New Roman',
+          fontStyle: 'italic',
+          fontWeight: 'bold'
+        }}>
+            BACK IN AUGUST
+          <br />
+            SIGN UP FOR FIRST UPDATES
+          <br />
+            LOVE YOU ALL
+        </h3> 
       </div>
     );
   }
