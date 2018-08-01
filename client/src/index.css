@@ -1,6 +1,11 @@
-body {
+body, html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background-color: #fffff0;
+  height: 100%;
+  background-image: url('./assets/mountains_footer.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
 }
