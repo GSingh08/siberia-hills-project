@@ -17,7 +17,9 @@ const LeftNavBar = (props) => {
             backgroundColor: 'ivory',
             color: 'black',
             border: 'none'
-          }}>
+          }}
+          onClick={{}}
+        >
           {name}
         </button>
       </div>

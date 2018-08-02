@@ -35,7 +35,10 @@ class LandingPage extends Component {
         ref={node => this.node = node}
         style={{
           textAlign: 'center',
-          height: '400px'
+          maxHeight: '400px',
+          width: '500px',
+          borderWidth: '1px',
+          borderStyle: 'solid'
         }}
       >
         <img src={require('../assets/Logo.png')} />

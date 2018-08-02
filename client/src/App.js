@@ -26,7 +26,9 @@ class App extends Component {
     if (!this.state.emailSignup) {
       return (
         <div>
-          <LandingPage checkClick={this.closeLandingPage} />
+          <LandingPage 
+            checkClick={this.closeLandingPage}
+            style={{ textAlign: 'center' }}/>
         </div>
       );
     } else {
