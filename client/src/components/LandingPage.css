@@ -15,4 +15,13 @@
 .btn{
   color: ivory;
   background-color: black;
+  height: 27px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.close-btn{
+  background-color: black;
+  color: ivory;
+  width: 60px;
 }

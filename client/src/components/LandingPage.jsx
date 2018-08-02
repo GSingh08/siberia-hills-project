@@ -12,12 +12,12 @@ class LandingPage extends Component {
 
   componentDidMount() {
     console.log('component mounted');
-    document.addEventListener('mousedown', this.handleOutsideClick, false);
+    document.addEventListener('mousedown', this.handleOutsideClick);
   }
 
   componentWillUnmount() {
     console.log('component unmounted');
-    document.removeEventListener('mousedown', this.handleOutsideClick, false);
+    document.removeEventListener('mousedown', this.handleOutsideClick);
   }
 
 
@@ -41,13 +41,21 @@ class LandingPage extends Component {
           borderStyle: 'solid'
         }}
       >
+        <button 
+          className="close-btn"
+          onClick={ this.props.checkClick }
+        >CLOSE</button>
         <img src={require('../assets/Logo.png')} />
         <br />
-        <div>
+        <div style={{ 
+          display: 'flex',
+          alignContent: 'center',
+          justifyContent: 'center' 
+        }}>
           <input
             style={{
               width: '200px',
-              height: '20px'
+              height: '21px',
             }}
             type="text"
             name="e-mail"
@@ -71,7 +79,7 @@ class LandingPage extends Component {
             SIGN UP FOR FIRST UPDATES
           <br />
             LOVE YOU ALL
-        </h3> 
+        </h3>
       </div>
     );
   }

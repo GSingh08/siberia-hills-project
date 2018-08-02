@@ -16,7 +16,6 @@ class App extends Component {
   }
   
   closeLandingPage () {
-    console.log('hi');
     this.setState({
       emailSignup: true
     });
@@ -26,9 +25,7 @@ class App extends Component {
     if (!this.state.emailSignup) {
       return (
         <div>
-          <LandingPage 
-            checkClick={this.closeLandingPage}
-            style={{ textAlign: 'center' }}/>
+          <LandingPage checkClick={this.closeLandingPage} />
         </div>
       );
     } else {
