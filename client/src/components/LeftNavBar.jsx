@@ -9,9 +9,20 @@ const LeftNavBar = (props) => {
     'HELP'
   ];
 
-  let LinkButtons = (linksArray) => {
-
-  };
+  let LinkButtons = Links.map((name) => {
+    return (
+      <div>
+        <button 
+          style={{
+            backgroundColor: 'ivory',
+            color: 'black',
+            border: 'none'
+          }}>
+          {name}
+        </button>
+      </div>
+    );
+  });
 
   return LinkButtons;
 };
