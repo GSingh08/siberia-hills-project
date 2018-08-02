@@ -1,17 +1,19 @@
 import React from 'react';
 
-
 const LeftNavBar = (props) => {
+  const Links = [
+    'SHOP',
+    'GALLERY',
+    'STOCKISTS',
+    'STORIES',
+    'HELP'
+  ];
 
-  return (
-    <div>
-      <div>Shop</div>
-      <div>Gallery</div>
-      <div>Stories</div>
-      <div>Help</div>
-    </div>
+  let LinkButtons = (linksArray) => {
 
-  );
+  };
+
+  return LinkButtons;
 };
 
 export default LeftNavBar;
