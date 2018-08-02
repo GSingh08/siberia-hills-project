@@ -1,16 +1,52 @@
 import React, { Component } from 'react';
 import LeftNavBar from '../components/LeftNavBar';
+import RightNavBar from '../components/RightNavBar';
+import Shop from '../components/Shop';
+import Help from '../components/Help';
+import Gallery from '../components/Gallery';
+import Stockists from '../components/Stockists';
+import Stories from '../components/Stories';
+
 
 class Main extends Component {
   constructor() {
     super();
 
+    this.state = {
+      views: {
+        SHOP: <Shop />,
+        HELP: <Help />,
+        GALLERY: <Gallery />,
+        STOCKISTS: <Stockists />,
+        STORIES: <Stories />
+      },
+      view: 'SHOP'
+    };
+
+    this.handleNavigationClick = this.handleNavigationClick.bind(this);
 
   }
 
+  handleNavigationClick(e) {
+    console.log('e', e);
+    let name = e.target.innerHTML;
+    let modifiedName = 
+    this.setState({
+      view: e.target.innerHTML
+    }, () => {  console.log(this.state.view); });
+  }
+
   render() {
+    let content = this.state.views[this.state.view];
     return (
-      <LeftNavBar />
+      <div style={{
+        display: 'flex'
+      }}>
+        <LeftNavBar 
+          currentView={this.state.view}
+          navClick={this.handleNavigationClick}/>
+        {content}
+      </div>
     );
   }
 }

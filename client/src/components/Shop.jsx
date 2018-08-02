@@ -8,7 +8,9 @@ class Shop extends Component {
   }
 
   render() {
-    
+    return (
+      <div>hello this is shop</div>
+    );
   }
 }
 

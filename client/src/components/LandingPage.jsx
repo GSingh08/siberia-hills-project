@@ -45,7 +45,7 @@ class LandingPage extends Component {
           className="close-btn"
           onClick={ this.props.checkClick }
         >CLOSE</button>
-        <img src={require('../assets/Logo.png')} />
+        <img src={require('../assets/Logo.png')} alt="" />
         <br />
         <div style={{ 
           display: 'flex',

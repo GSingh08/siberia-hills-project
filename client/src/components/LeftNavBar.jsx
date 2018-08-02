@@ -1,32 +1,59 @@
-import React from 'react';
+import React, { Component } from 'react';
+import NavButton from './NavButton';
 
-const LeftNavBar = (props) => {
-  const Links = [
-    'SHOP',
-    'GALLERY',
-    'STOCKISTS',
-    'STORIES',
-    'HELP'
-  ];
+class LeftNavBar extends Component {
+  constructor(props) {
+    super(props);
 
-  let LinkButtons = Links.map((name) => {
+    this.state = {
+      Links: [
+        'Shop',
+        'Gallery',
+        'Stockists',
+        'Stories',
+        'Help'
+      ]
+    };
+  }
+
+  render() {
     return (
       <div>
-        <button 
-          style={{
-            backgroundColor: 'ivory',
-            color: 'black',
-            border: 'none'
-          }}
-          onClick={{}}
-        >
-          {name}
-        </button>
+        {this.state.Links.map(link => {
+          return (
+            <NavButton 
+              key={link}
+              name={link}
+              currentView={this.props.currentView}
+              navClick={this.props.navClick}/>
+          );
+        })}
       </div>
     );
-  });
+  }
+}
 
-  return LinkButtons;
+const styles = {
+  
 };
+
+// let LinkButtons = Links.map((name) => {
+//   let renderColor = props.currentView.toUpperCase() === name ? 'red' : 'black';
+//   return (
+//     <div key={name}>
+//       <button 
+//         style={{
+//           backgroundColor: 'ivory',
+//           color: renderColor,
+//           border: 'none',
+//           fontSize: '20px'
+//         }}
+//         // onClick={{}}
+//       >
+//         {name}
+//       </button>
+//     </div>
+//   );
+// });
 
 export default LeftNavBar;
