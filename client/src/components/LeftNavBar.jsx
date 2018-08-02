@@ -23,10 +23,10 @@ class LeftNavBar extends Component {
       }}>
         {this.state.Links.map(link => {
           return (
-            <NavButton 
+            <NavButton
               key={link}
               name={link}
-              currentView={this.props.currentView}
+              currentlyViewed={this.props.currentView === link.toUpperCase()}
               navClick={this.props.navClick}/>
           );
         })}
