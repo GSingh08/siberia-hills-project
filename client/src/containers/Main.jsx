@@ -45,7 +45,15 @@ class Main extends Component {
         <LeftNavBar 
           currentView={this.state.view}
           navClick={this.handleNavigationClick}/>
-        {content}
+        <div className="content"
+          style={{
+            flex: 5,
+            margin: '0px 50px 0px 50px',
+            border: '1px solid black'
+          }}>
+          {content}
+        </div>
+        <RightNavBar />
       </div>
     );
   }

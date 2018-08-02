@@ -18,7 +18,9 @@ class LeftNavBar extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{
+        marginLeft: '20px'
+      }}>
         {this.state.Links.map(link => {
           return (
             <NavButton 
@@ -34,7 +36,7 @@ class LeftNavBar extends Component {
 }
 
 const styles = {
-  
+  flex: 1
 };
 
 // let LinkButtons = Links.map((name) => {
