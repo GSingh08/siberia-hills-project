@@ -28,12 +28,11 @@ class Main extends Component {
   }
 
   handleNavigationClick(e) {
-    console.log('e', e);
     let name = e.target.innerHTML;
     let modifiedName = 
     this.setState({
       view: e.target.innerHTML
-    }, () => {  console.log(this.state.view); });
+    }, () => { console.log(this.state.view); });
   }
 
   render() {

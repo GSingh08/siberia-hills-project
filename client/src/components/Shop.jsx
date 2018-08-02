@@ -7,6 +7,13 @@ class Shop extends Component {
     this.state = {};
   }
 
+  componentDidMount() {
+    // fetch products from store
+    let products = [];
+
+
+  }
+
   render() {
     return (
       <div>hello this is shop</div>
